@@ -26,7 +26,7 @@ public class Veterinaria {
     
         Cliente varCliente = new Cliente();
         for (Cliente miCliente : getClientes()){
-            if (miCliente.getNombre() == nombreCliente){
+            if (miCliente.getNombre().equals(nombreCliente) ){
                 varCliente = miCliente;
             }
         }

@@ -13,9 +13,9 @@ public class AdmUsuarios {
     private void simularTabla(){
         
         this.lstUsuario.add(new Empleado("001", "Ebert", "Pasquel", "epasquel", "ebert123"));
-        this.lstUsuario.add(new Empleado("002", "Javier", "Pasquel", "epasquel", "javier123"));
-        this.lstUsuario.add(new Empleado("003", "Alisson", "Pasquel", "epasquel", "alisson123"));
-        this.lstUsuario.add(new Empleado("004", "Bryan", "Pasquel", "epasquel", "bryan123"));
+        this.lstUsuario.add(new Empleado("002", "Javier", "Pasquel", "jpasquel", "javier123"));
+        this.lstUsuario.add(new Empleado("003", "Alisson", "Pasquel", "apasquel", "alisson123"));
+        this.lstUsuario.add(new Empleado("004", "Bryan", "Pasquel", "bpasquel", "bryan123"));
         
     }
     

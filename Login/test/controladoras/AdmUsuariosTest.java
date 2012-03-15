@@ -36,7 +36,7 @@ public class AdmUsuariosTest {
     
     @Test
     public void siElPasswordEsValidoDebeDarmeAcceso(){        
-        assertFalse(admUsuarios.validarPassword("epasquel", "ebert123"));
+        assertTrue(admUsuarios.validarPassword("epasquel", "ebert123"));
         System.out.println("Usuario Válido");        
     }
     
