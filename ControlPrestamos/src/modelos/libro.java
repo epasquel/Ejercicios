@@ -47,6 +47,14 @@ public class libro {
     private String titLibro;
     private String matLibro;
     private Boolean flagEnable;
-    
+    private Boolean staLibro;
+
+    public Boolean getStaLibro() {
+        return staLibro;
+    }
+
+    public void setStaLibro(Boolean staLibro) {
+        this.staLibro = staLibro;
+    }
     
 }

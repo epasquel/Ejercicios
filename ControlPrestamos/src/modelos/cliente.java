@@ -1,6 +1,8 @@
 
 package modelos;
 
+import java.util.ArrayList;
+
 public class cliente {
 
     public cliente(String codCliente, String nomCliente, String apeCliente, Integer canPrestamos) {
@@ -55,5 +57,8 @@ public class cliente {
     private String apeCliente;
     private Integer canPrestamos;
     private Boolean flagEnable;
+    private ArrayList<libro> listLibro;
+
+
     
 }
