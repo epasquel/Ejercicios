@@ -18,27 +18,52 @@ public class ControlPrestamosTest {
     
     admPrestamosLibros objAdm = new admPrestamosLibros();
     
+     @Test
+    public void siNoIngresoElClienteMeDebeDarError(){
+        assertFalse(objAdm.verificarCliente(null));
+        System.out.println("Cliente no debe estar vacío"); 
+    }
+     
+    @Test
+    public void siElClienteNoExisteDebeMandarMensaje(){        
+        assertNull(objAdm.validarExistenciaCliente(null));
+        System.out.println("Cliente Inexistente");        
+    }
+    
     @Test
     public void puedeSolicitarLibro(){
         assertTrue(objAdm.puedeSolicitarLibro("C0001"));
-        System.out.println("Puede solicitar libro");
+        System.out.println("Puede solictar libro");
     }
     
     @Test
     public void noPuedeSolicitarLibro(){
         assertFalse(objAdm.puedeSolicitarLibro("C0003"));
-        System.out.println("No puede solicitar libro");
+        System.out.println("No puede solicitra libro");
     }
     
     @Test
-    public void libroNoDisponible(){
-        assertFalse(objAdm.libroDisponible("L0003"));
-        System.out.println("El libro no esta disponible");
+    public void siElLibroNoExisteDebeMandarMensaje(){
+        assertNull(objAdm.verificarLibro("LB0010"));
+        System.out.println("EL Código ingresado no existe");
     }
+    
     @Test
-    public void libroDisponible(){
-        assertTrue(objAdm.libroDisponible("L0001"));
-        System.out.println("El libro esta disponible");
+    public void siElLibroExisteDebeMandarMensaje(){
+        assertNotNull(objAdm.verificarLibro("LB0001"));
+        System.out.println("EL Código ingresado si existe");
+    }   
+   
+    @Test
+    public void siNoTieneLibroDebeMandarMensaje(){
+        assertNull(objAdm.verificarPrestamoParaDevolucion("C0001", "LB0010"));
+        System.out.println("Libro no asignado al cliente");
+    }
+    
+    @Test
+    public void siTieneLibroDebeMandarMensaje(){
+        assertNotNull(objAdm.verificarPrestamoParaDevolucion("C0001", "LB0001"));
+        System.out.println("Libro asignado al cliente, devolucion pendiente");
     }
     
 }
