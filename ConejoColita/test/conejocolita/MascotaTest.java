@@ -6,6 +6,7 @@ import org.junit.AfterClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 
 public class MascotaTest {
@@ -16,25 +17,22 @@ public class MascotaTest {
 
     @Test
     public void mascotaDebeTenerNombre() {
-        ArrayList<Mascota> listMascota = new ArrayList<Mascota>();
-        listMascota.add(new Mascota("Colita", "Conejo"));
-        listMascota.add(new Mascota("Piolin", "Canario"));
-        String nombres = "";
-        for (Mascota mascota: listMascota){
-            nombres = (mascota.getNombre() == "") ? "" : ";" + mascota.getNombre();
-        }        
-        assertNotNull(nombres);
+        Mascota mascota = new Mascota("Colita", "Conejo");
+        assertNotNull(mascota.getNombre());
+        System.out.println("El nombre de la mascota es  : " + mascota.getNombre());
     }
     
     @Test
     public void mascotaMueveLaCola(){
         Mascota mascota = new Mascota("Colita", "Conejo");
         assertSame("Estoy moviendo la cola", mascota.moverCola());
+        System.out.println(mascota.moverCola());
     }
     
     @Test
     public void mascotaSeAcerca(){
         Mascota mascota = new Mascota("Colita", "Conejo");
         assertSame("Me esoty acercando", mascota.acercarse());
+        System.out.println(mascota.acercarse());
     }
 }

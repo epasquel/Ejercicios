@@ -21,7 +21,7 @@ public class DuenhoTest {
 
 
     @Test
-    public void elDuenhoDebeTenerNomobre() {
+    public void elDuenhoDebeTenerNombre() {
         ArrayList<String> listNombre = new ArrayList<String>();
         listNombre.add("Carlos");
         listNombre.add("Joaquin");
@@ -29,6 +29,8 @@ public class DuenhoTest {
         listMascota.add(new Mascota("Colita", "Conejo"));
         Duenho duenho = new Duenho(listNombre, 5, listMascota);
         assertNotNull(duenho.getNombre());
+        System.out.println("Los nombres son : " + duenho.getNombre());
+                
     }
     
     @Test
@@ -41,6 +43,8 @@ public class DuenhoTest {
         Duenho duenho = new Duenho(listNombre, 5, listMascota);
         String mensajeRecibido = duenho.tocarOreja("Conejo");
         assertSame("Estoy moviendo la cola", mensajeRecibido);
+        System.out.println(mensajeRecibido);
+                
     }
     
     @Test
@@ -53,6 +57,9 @@ public class DuenhoTest {
         Duenho duenho = new Duenho(listNombre, 5, listMascota);
         String mensajeRecibido = duenho.mostrarZanahoria("Conejo");
         assertSame("Me esoty acercando", mensajeRecibido);
+        System.out.println(mensajeRecibido);
+                
+        
     }
     
     @Test
@@ -64,6 +71,7 @@ public class DuenhoTest {
         Duenho duenho = new Duenho(listNombre, 5, listMascota);
         String mensajeRecibido = duenho.darAlpiste("Canario");
         assertSame("Estoy cantando", mensajeRecibido);
+        System.out.println(mensajeRecibido);
     }
     
 }

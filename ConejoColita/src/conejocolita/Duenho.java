@@ -13,7 +13,7 @@ public class Duenho {
     public String getNombre() {
         String retornado = "";
         for ( String nombre : nombres){
-            retornado = (retornado == "") ? "": ";" + nombre;
+            retornado = retornado + ((retornado == "") ? "": ";") + nombre;
         }
         return retornado;
     }    
