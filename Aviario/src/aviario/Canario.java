@@ -2,6 +2,9 @@
 package aviario;
 
 import appInterfaces.IProducto;
+import db.dbCanarios;
+import db.dbLoros;
+import java.util.ArrayList;
 
 
 public class Canario extends Ave implements IProducto{
@@ -34,5 +37,12 @@ public class Canario extends Ave implements IProducto{
     public double getPrecioUnitario(){
         return producto.getPrecioUnitario();
     }
+    
+    public static ArrayList<IProducto> getCanarios(){
+        dbCanarios canarios = new dbCanarios();
+        return canarios.simulaDataCanarios();
+    }
+    
+
     
 }

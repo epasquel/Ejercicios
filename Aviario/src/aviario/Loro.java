@@ -2,6 +2,8 @@
 package aviario;
 
 import appInterfaces.IProducto;
+import db.dbLoros;
+import java.util.ArrayList;
 
 
 public class Loro extends Ave implements IProducto{
@@ -33,6 +35,11 @@ public class Loro extends Ave implements IProducto{
     
     public double getPrecioUnitario(){
         return producto.getPrecioUnitario();
+    }
+    
+    public static ArrayList<IProducto> getLoros(){
+        dbLoros loros = new dbLoros();
+        return loros.simulaDataLoros();
     }
     
 }

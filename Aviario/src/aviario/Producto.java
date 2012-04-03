@@ -2,6 +2,7 @@
 package aviario;
 
 import appInterfaces.IProducto;
+import java.util.ArrayList;
 
 
 public class Producto implements IProducto{
@@ -27,6 +28,5 @@ public class Producto implements IProducto{
     public double getPrecioUnitario() {
         return precioUnitario;
     }
-
     
 }
